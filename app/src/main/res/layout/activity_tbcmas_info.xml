@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecientesDetalles">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/btnBackTopbyCountries"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+            <TextView
+                android:id="@+id/txtMensajeDetallesIntopbyCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans"
+                android:text="Mas acerca de"
+                android:textColor="@android:color/background_dark"
+                app:layout_constraintBottom_toBottomOf="@+id/btnBackTopbyCountries"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnBackTopbyCountries" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardviewTopdetallesTBC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnBackTopbyCountries">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtCountryNameinDetalles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/autour_one"
+                        android:text="CountryName"
+                        android:textSize="24sp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardviewYoutube"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:shape="ring"
+                        app:cardElevation="0dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/imgYoutubetopbyC"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/logoyoutube" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <ImageButton
+                        android:id="@+id/btnLinkCountry"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:layout_alignTop="@+id/cardviewYoutube"
+                        android:layout_alignBottom="@+id/cardviewYoutube"
+                        android:layout_marginEnd="15dp"
+                        android:layout_toStartOf="@+id/cardviewYoutube"
+                        android:backgroundTint="@color/white"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/web"
+                        app:layout_constraintBottom_toBottomOf="@+id/cardviewYoutube"
+                        app:layout_constraintEnd_toStartOf="@+id/cardviewYoutube"
+                        app:layout_constraintTop_toTopOf="@+id/cardviewYoutube" />
+
+                    <TextView
+                        android:id="@+id/txtCountryDescIntopbyCountries"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imgPaisTopByCountryDetalles"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/open_sans"
+                        android:text="countryDesc"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/imgPaisTopByCountryDetalles"
+                        android:layout_width="340dp"
+                        android:layout_height="340dp"
+                        android:layout_below="@+id/txtCountryNameinDetalles"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="12dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/b4" />
+
+                    <ViewFlipper
+                        android:id="@+id/v_flipperImagenDetallesCountry"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_below="@+id/txtCountryDescIntopbyCountries"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtCountryDescIntopbyCountries">
+
+                    </ViewFlipper>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/cardviewTopdetallesTBC">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardviewXRecom"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:elevation="50dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <RelativeLayout
+                                android:id="@+id/rvlRecom"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/txtRecomendacionesInTopByCountries"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="8dp"
+                                    android:fontFamily="@font/autour_one"
+                                    android:text="Lugares Recomendados"
+                                    android:textSize="20sp" />
+
+                                <ScrollView
+                                    android:id="@+id/scvWebView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/txtRecomendacionesInTopByCountries"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginEnd="4dp"
+                                    android:layout_marginBottom="8dp">
+
+                                    <WebView
+                                        android:id="@+id/wbvLugaresRecomendados"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        tools:ignore="WebViewLayout"
+                                        tools:layout_editor_absoluteX="1dp"
+                                        tools:layout_editor_absoluteY="1dp" />
+
+                                </ScrollView>
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </ScrollView>
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</LinearLayout>

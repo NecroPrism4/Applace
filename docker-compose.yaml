@@ -1,0 +1,13 @@
+version: "3"
+services:
+  android-app:
+    build:
+      context: .
+      dockerfile: dockerfile.app # Asegúrate de que el nombre coincida con el nombre de tu Dockerfile
+    container_name: android-app-container
+    volumes:
+      - .:/app # Monta el directorio actual en el contenedor
+    environment:
+      - TERM=xterm-256color # Ajusta el entorno según tus necesidades
+    ports:
+      - "8080:8080" # Ajusta el mapeo de puertos según tu aplicación

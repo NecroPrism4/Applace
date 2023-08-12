@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecientesDetalles">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/btnBackTopbyCountries"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+            <TextView
+                android:id="@+id/txtMensajeDetalles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans"
+                android:text="Mas acerca de"
+                android:textColor="@android:color/background_dark"
+                app:layout_constraintBottom_toBottomOf="@+id/btnBackTopbyCountries"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnBackTopbyCountries" />
+
+            <ImageView
+                android:id="@+id/big_image"
+                android:layout_width="340dp"
+                android:layout_height="340dp"
+                android:layout_marginTop="32dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnBackTopbyCountries"
+                app:srcCompat="@drawable/chichenitza" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/big_image">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardviewTopdetallesTBC"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/txtWonderName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="16dp"
+                                    android:fontFamily="@font/autour_one"
+                                    android:text="CountryName"
+                                    android:textSize="24sp" />
+
+
+                                <ImageButton
+                                    android:id="@+id/btnAddlista"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:src="@drawable/listar"
+                                    android:backgroundTint="@color/white"
+                                    android:scaleType="centerCrop"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageButton
+                                    android:id="@+id/btnLinkWonder"
+                                    android:layout_width="50dp"
+                                    android:layout_height="40dp"
+                                    android:layout_alignTop="@+id/btnAddlista"
+                                    android:layout_alignBottom="@+id/btnAddlista"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:layout_toStartOf="@+id/btnAddlista"
+                                    android:backgroundTint="@color/white"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/web"
+                                    app:layout_constraintBottom_toBottomOf="@+id/btnAddlista"
+                                    app:layout_constraintEnd_toStartOf="@+id/btnAddlista"
+                                    app:layout_constraintTop_toTopOf="@+id/btnAddlista" />
+
+                                <TextView
+                                    android:id="@+id/txtWonderDesc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/txtWonderName"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_marginBottom="16dp"
+                                    android:fontFamily="@font/open_sans"
+                                    android:text="countryDesc"
+                                    android:textColor="#474747"
+                                    android:textSize="18sp" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardviewXRecom"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="16dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/cardviewTopdetallesTBC">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/txtRecomendaciones"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="16dp"
+                                    android:fontFamily="@font/autour_one"
+                                    android:text="Lugares Recomendados"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/txtLugarestext"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/txtRecomendaciones"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_marginBottom="16dp"
+                                    android:fontFamily="@font/open_sans_light"
+                                    android:text="Lugares"
+                                    android:textColor="#474747"
+                                    android:textSize="16sp" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <ViewFlipper
+                            android:id="@+id/v_flipperImagenDet"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="24dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cardviewXRecom">
+                        </ViewFlipper>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardviewXimagenesRoll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="30dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/v_flipperImagenDet">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/txtExtend"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_marginBottom="30dp"
+                                    android:fontFamily="@font/open_sans_light"
+                                    android:text="Extend"
+                                    android:textColor="#474747"
+                                    android:textSize="16sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent" />
+
+                            </RelativeLayout>
+                            </androidx.cardview.widget.CardView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </ScrollView>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtidLug"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/autour_one"
+                android:text="Country"
+                app:layout_constraintBottom_toTopOf="@+id/big_image"
+                app:layout_constraintEnd_toEndOf="@+id/txtMensajeDetalles"
+                app:layout_constraintStart_toStartOf="@+id/txtMensajeDetalles"
+                app:layout_constraintTop_toBottomOf="@+id/txtMensajeDetalles" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</LinearLayout>
