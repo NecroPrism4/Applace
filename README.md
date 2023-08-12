@@ -1,7 +1,7 @@
 # Applace Explorer App
 Applace is a project carried out during the first semesters of the university, an application that shows interesting places and information about them.
 
-![App Logo](https://ibb.co/5rppVXH)
+![App Logo](./app/src/main/res/drawable/logoapp.png)
 
 Welcome to the AwesomePlaces Explorer App repository! This Android app was created as a university project to help users discover and explore interesting places along with detailed information.
 
